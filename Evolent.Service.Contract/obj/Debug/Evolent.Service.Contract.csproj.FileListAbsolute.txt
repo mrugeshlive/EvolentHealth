@@ -1,0 +1,5 @@
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Service.Contract\bin\Debug\Evolent.Service.Contract.dll
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Service.Contract\bin\Debug\Evolent.Service.Contract.pdb
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Service.Contract\obj\Debug\Evolent.Service.Contract.dll
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Service.Contract\obj\Debug\Evolent.Service.Contract.pdb
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Service.Contract\obj\Debug\Evolent.Service.Contract.csprojResolveAssemblyReference.cache

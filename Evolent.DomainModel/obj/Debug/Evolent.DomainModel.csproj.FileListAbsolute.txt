@@ -1,0 +1,5 @@
+C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\bin\Debug\Evolent.DomainModel.dll
+C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\bin\Debug\Evolent.DomainModel.pdb
+C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\obj\Debug\Evolent.DomainModel.dll
+C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\obj\Debug\Evolent.DomainModel.pdb
+C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\obj\Debug\Evolent.DomainModel.csprojResolveAssemblyReference.cache

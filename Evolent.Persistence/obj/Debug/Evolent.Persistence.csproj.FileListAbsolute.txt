@@ -1,0 +1,7 @@
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Persistence\obj\Debug\Evolent.Persistence.csprojResolveAssemblyReference.cache
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Persistence\bin\Debug\Evolent.Persistence.dll
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Persistence\bin\Debug\Evolent.Persistence.pdb
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Persistence\bin\Debug\Evolent.DomainModel.dll
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Persistence\bin\Debug\Evolent.DomainModel.pdb
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Persistence\obj\Debug\Evolent.Persistence.dll
+C:\MRugesh\Assignment\EvolentHealth\Evolent.Persistence\obj\Debug\Evolent.Persistence.pdb
