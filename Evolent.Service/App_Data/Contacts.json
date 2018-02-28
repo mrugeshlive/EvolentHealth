@@ -1,1 +1,24 @@
-﻿
+[
+  {
+    "Id": 3,
+    "FirstName": "Bon",
+    "LastName": "Jovi",
+    "FullName": "Bon Jovi",
+    "ContactInformation": {
+      "EmailId": "bon@jovi.com",
+      "MobileNumber": "9890896745"
+    },
+    "IsActive": true
+  },
+  {
+    "Id": 1,
+    "FirstName": "James",
+    "LastName": "Hettfield",
+    "FullName": "James Hettfield",
+    "ContactInformation": {
+      "EmailId": "james@hettfield.com",
+      "MobileNumber": "9890896745"
+    },
+    "IsActive": true
+  }
+]

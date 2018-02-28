@@ -2,4 +2,5 @@ C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\bin\Debug\Evolent.Domain
 C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\bin\Debug\Evolent.DomainModel.pdb
 C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\obj\Debug\Evolent.DomainModel.dll
 C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\obj\Debug\Evolent.DomainModel.pdb
-C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\obj\Debug\Evolent.DomainModel.csprojResolveAssemblyReference.cache
+C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\bin\Debug\Newtonsoft.Json.dll
+C:\MRugesh\Assignment\EvolentHealth\Evolent.DomainModel\bin\Debug\Newtonsoft.Json.xml

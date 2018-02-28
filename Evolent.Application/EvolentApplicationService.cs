@@ -1,9 +1,10 @@
-﻿using Evolent.Application.Adapters;
+﻿using AutoMapper;
 using Evolent.Application.Contract;
 using Evolent.DomainModel;
+using Evolent.DomainModel.Models;
 using Evolent.Service.Contract.DataContracts;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Evolent.Application
@@ -11,19 +12,22 @@ namespace Evolent.Application
     public class EvolentApplicationService : IEvolentApplicationService
     {
         private readonly IEvolentRepositoryFactory _repositoryFactory;
-        private readonly DtoAdapter _dtoAdapter;
-        private readonly DomainAdapter _domainAdapter;
 
         public EvolentApplicationService(IEvolentRepositoryFactory repositoryFactory)
         {
             _repositoryFactory = repositoryFactory;
-            _domainAdapter = new DomainAdapter();
-            _dtoAdapter = new DtoAdapter();
         }
 
-        public Task<IEnumerable<PersonDto>> GetAllContacts()
+        public async Task<IEnumerable<PersonDto>> GetAllContacts()
         {
-            throw new NotImplementedException();
+            var allContacts = new List<PersonDto>();
+            using (var repository = _repositoryFactory.Create())
+            {
+                var contacts = await repository.GetAllContactsAsync().ConfigureAwait(false);
+                if (contacts.Any())
+                    allContacts.AddRange(Mapper.Map<List<PersonDto>>(contacts));
+                return allContacts;
+            }
         }
 
         public async Task<PersonDto> GetContactByIdAsync(int contactId)
@@ -31,22 +35,34 @@ namespace Evolent.Application
             using (var repository = _repositoryFactory.Create())
             {
                 var contact = await repository.GetContactByIdAsync(contactId).ConfigureAwait(false);
-                return _domainAdapter.Adapt(contact);
+                if (contact != null)
+                    return Mapper.Map<PersonDto>(contact);
+                return null;
             }
         }
 
-        public Task<PersonDto> SaveContactAsync(PersonDto contact)
+        public async Task<bool> SaveContactAsync(PersonDto contact)
         {
-            throw new NotImplementedException();
+            using (var repository = _repositoryFactory.Create())
+            {
+                return await repository.SaveContactAsync(Mapper.Map<Person>(contact)).ConfigureAwait(false);
+            }
         }
 
-        public Task<PersonDto> UpdateContactAsync(PersonDto contact)
+        public async Task<bool> UpdateContactAsync(PersonDto contact)
         {
-            throw new NotImplementedException();
+            using (var repository = _repositoryFactory.Create())
+            {
+                return await repository.UpdateContactAsync(Mapper.Map<Person>(contact)).ConfigureAwait(false);
+            }
         }
-        public Task<bool> DeleteContactAsync(int contactId)
+
+        public async Task<bool> DeleteContactAsync(int contactId)
         {
-            throw new NotImplementedException();
+            using (var repository = _repositoryFactory.Create())
+            {
+                return await repository.DeleteContactAsync(contactId).ConfigureAwait(false);
+            }
         }
     }
 }

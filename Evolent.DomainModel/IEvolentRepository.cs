@@ -9,8 +9,8 @@ namespace Evolent.DomainModel
     {
         Task<IEnumerable<Person>> GetAllContactsAsync();
         Task<Person> GetContactByIdAsync(int contactId);
-        Task<Person> SaveContactAsync(Person contact);
-        Task<Person> DeleteContactAsync(Person contact);
-        Task<Person> UpdateContactAsync(Person contact);
+        Task<bool> SaveContactAsync(Person contact);
+        Task<bool> DeleteContactAsync(int contactId);
+        Task<bool> UpdateContactAsync(Person contact);
     }
 }

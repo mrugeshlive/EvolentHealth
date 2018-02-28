@@ -9,8 +9,8 @@ namespace Evolent.Application.Contract
     {
         Task<IEnumerable<PersonDto>> GetAllContacts();
         Task<PersonDto> GetContactByIdAsync(int contactId);
-        Task<PersonDto> SaveContactAsync(PersonDto contact);
+        Task<bool> SaveContactAsync(PersonDto contact);
         Task<bool> DeleteContactAsync(int contactId);
-        Task<PersonDto> UpdateContactAsync(PersonDto contact);
+        Task<bool> UpdateContactAsync(PersonDto contact);
     }
 }

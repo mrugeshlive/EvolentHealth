@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Evolent.Service.Infrastructure;
 using System.Web.Http;
+using Unity;
 
 namespace Evolent.Service
 {
@@ -9,13 +8,12 @@ namespace Evolent.Service
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
-
-            // Web API routes
+            var container = new UnityContainer();
+            BootStrapper.Execute(container);
+            
             config.MapHttpAttributeRoutes();
-
             config.Routes.MapHttpRoute("Contact", "v1/contacts/{id}", new { controller = "contacts", id = RouteParameter.Optional });
-
+            config.DependencyResolver = new UnityResolver(container);
         }
     }
 }
